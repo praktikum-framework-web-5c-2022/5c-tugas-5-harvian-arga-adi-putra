@@ -1,7 +1,8 @@
 <?php
 
+use Faker\Factory as Faker;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PembeliController;
+use App\Http\Controllers\MataKuliahController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,5 @@ use App\Http\Controllers\PembeliController;
 |
 */
 
-Route::resource('/pembeli', PembeliController::class);
-Route::resource('/', PembeliController::class);
+
+Route::get('/', [MataKuliahController::class, 'index']);
